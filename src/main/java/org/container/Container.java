@@ -54,4 +54,17 @@ public class Container<T> {
         return arr[number];
     }
 
+    // Удаление элемента по заданному номеру
+    public void remove(int number) {
+        if (number >= size || number < 0) {
+            throw new IndexOutOfBoundsException("Индекс вне допустимого диапазона: " + number);
+        }
+
+        // Сдвигаем элементы влево после удаления
+        for (int i = number; i <= size - 2; i++) {
+            arr[i] = arr[i + 1];
+        }
+        size--;
+    }
+
 }
