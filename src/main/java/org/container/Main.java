@@ -1,9 +1,25 @@
 package org.container;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class ContainerRunner {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Container<String> container = new Container<>();
+
+        container.add("Первый",1);
+        container.add("Второй",2);
+        container.add("Третий",3);
+
+        System.out.println("Количество элементов в контейнере: " + container.getSize());
+
+        for (int i = 0; i < container.getSize(); i++) {
+            System.out.println("Элемент на позиции " + i + ": " + container.get(i));
+        }
+
+        container.remove(2);
+        System.out.println("\nПосле удаления второго элемента:");
+
+        System.out.println("Количество элементов в контейнере: " + container.getSize());
+        for (int i = 0; i < container.getSize(); i++) {
+            System.out.println("Элемент на позиции " + i + ": " + container.get(i));
+        }
     }
 }
