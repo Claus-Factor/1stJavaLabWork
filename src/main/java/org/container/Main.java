@@ -1,12 +1,12 @@
 package org.container;
 
-public class ContainerRunner {
+public class Main {
     public static void main(String[] args) {
         Container<String> container = new Container<>();
 
-        container.add("Первый",1);
-        container.add("Второй",2);
-        container.add("Третий",3);
+        container.add("Первый",0);
+        container.add("Второй",1);
+        container.add("Третий",2);
 
         System.out.println("Количество элементов в контейнере: " + container.getSize());
 
