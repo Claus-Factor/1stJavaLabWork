@@ -30,4 +30,20 @@ public class Container<T> {
         return size;
     }
 
+    // Добавляем элемент в определённое место по номеру
+    public void add(T element, int number) {
+        if (number > size || number < 0) {
+            throw new IndexOutOfBoundsException("Индекс вне допустимого диапазона: " + number);
+        }
+
+        if (size == capacity) {
+            this.resize();
+        }
+        for (int i = number + 1; i <= size; i++) {
+            arr[i] = arr[i - 1];
+        }
+        arr[number] = element;
+        size++;
+    }
+
 }
