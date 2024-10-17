@@ -46,4 +46,12 @@ public class Container<T> {
         size++;
     }
 
+    // Считываем значение n-го элемента
+    public T get(int number) {
+        if (number >= size || number < 0) {
+            throw new IndexOutOfBoundsException("Индекс вне допустимого диапазона: " + number);
+        }
+        return arr[number];
+    }
+
 }
