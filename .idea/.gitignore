@@ -1,13 +1,14 @@
-# Default ignored files
+# Игнорируемые файлы по умолчанию
 /shelf/
 /workspace.xml
 
+# Исключаем каталоги target, где находятся скомпилированные файлы и артефакты сборки
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# IntelliJ IDEA
+# Исключаем настройки IntelliJ IDEA
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -15,3 +16,7 @@ target/
 *.iws
 *.iml
 *.ipr
+
+# Исключаем файлы тестов и отчетов
+/test-output/
+.surefire/
